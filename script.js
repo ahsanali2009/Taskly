@@ -22,10 +22,10 @@
             todoTaskText.value ? card.appendChild(tasksList) : null 
             tasksList.appendChild(deleteBtn)
 
-    deleteBtn.onclick = function(){ // delete the task
-        let removed = tasksList.remove();
-        // console.log(tasks.indexOf(tasksList.innerHTML))
+    deleteBtn.onclick = function(){
         
+        let removed = tasksList.remove();
+
     }
 })
 
@@ -33,5 +33,3 @@ todoTaskText.value = ""
 
 }
 console.log(tasks)
-
-// work getting index of the task that have been delted
