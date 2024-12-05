@@ -18,18 +18,29 @@
     let deleteBtn = document.createElement('button')
     deleteBtn.setAttribute('class','deleteBtn')
 
+    let editBtn = document.createElement('button') // Edit button...
+    editBtn.setAttribute('class','editBtn')
+
+
             tasks.forEach(element => { // for-each loop for displaying the tasks created
             todoTaskText.value ? card.appendChild(tasksList) : null 
             tasksList.appendChild(deleteBtn)
+            tasksList.appendChild(editBtn)  
+        })
 
-    deleteBtn.onclick = function(){
-        
-        let removed = tasksList.remove();
+        deleteBtn.onclick = () => {
+            let removed = tasksList.remove();
 
     }
-})
+
+        editBtn.onclick = () =>{
+            todoTaskText.value = (tasksList).textContent;
+            // work on changing the task when edited...
+            
+    }
 
 todoTaskText.value = ""
 
 }
+
 console.log(tasks)
