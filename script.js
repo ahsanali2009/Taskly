@@ -4,7 +4,7 @@
 
     let tasks = []
 
-    addTaskBtn.onclick = function(event){ // add task function
+    addTaskBtn.onclick = function addT(event){
     event.preventDefault() ;
 
     let tasksList = document.createElement('h4') ;
@@ -18,11 +18,11 @@
     let deleteBtn = document.createElement('button')
     deleteBtn.setAttribute('class','deleteBtn')
 
-    let editBtn = document.createElement('button') // Edit button...
+    let editBtn = document.createElement('button')
     editBtn.setAttribute('class','editBtn')
 
 
-            tasks.forEach(element => { // for-each loop for displaying the tasks created
+            tasks.forEach(element => {
             todoTaskText.value ? card.appendChild(tasksList) : null 
             tasksList.appendChild(deleteBtn)
             tasksList.appendChild(editBtn)  
@@ -35,12 +35,20 @@
 
         editBtn.onclick = () =>{
             todoTaskText.value = (tasksList).textContent;
-            // work on changing the task when edited...
+            addTaskBtn.textContent = "Edit"
+            
+            addTaskBtn.onclick = (event) =>{
+                event.preventDefault()
+
+                tasksList.innerText = todoTaskText.value
+                tasksList.appendChild(deleteBtn)
+                tasksList.appendChild(editBtn) 
+
+                todoTaskText.value = ""
+        }
             
     }
 
 todoTaskText.value = ""
 
 }
-
-console.log(tasks)
