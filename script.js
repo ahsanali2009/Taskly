@@ -4,7 +4,7 @@
 
     let tasks = []
 
-    addTaskBtn.onclick = function addT(event){
+    addTaskBtn.onclick = function addTaskFunction(event){
     event.preventDefault() ;
 
     let tasksList = document.createElement('h4') ;
@@ -34,18 +34,24 @@
     }
 
         editBtn.onclick = () =>{
-            todoTaskText.value = (tasksList).textContent;
+
+            todoTaskText.value = tasksList.textContent;
+            
             addTaskBtn.textContent = "Edit"
             
             addTaskBtn.onclick = (event) =>{
                 event.preventDefault()
 
                 tasksList.innerText = todoTaskText.value
+
                 tasksList.appendChild(deleteBtn)
                 tasksList.appendChild(editBtn) 
 
                 todoTaskText.value = ""
-        }
+                addTaskBtn.textContent = "Add"
+            
+                addTaskBtn.onclick = addTaskFunction;
+            }
             
     }
 
