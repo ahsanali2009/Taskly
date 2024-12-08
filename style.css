@@ -1,57 +1,49 @@
 body{
 font-family: "Poppins",serif;
+background-color:rgb(1, 1, 21);
 }
-
 #tasksList{
 color: white;
-background-color:black ;
+background: linear-gradient(135deg, rgba(225,225,225,0.1) rgba(225,225,225,0)); border:1px solid rgba(225, 225, 225, 0.18); ;border-radius: 3px;
+box-shadow: 0 8px 32px 0 rgba(53, 0, 103, 0.37);
 text-align: center;
 width: 100%;
-border: 2px solid white;
 min-height: 4vh;
-text-align: center;
-border-radius: 3px;
 }
-
-#card{
-margin:100px;
+#card{ 
+min-height: 100vh;
 height: auto;
-border: 2px solid black; border-radius: 4px;
-min-width: 10%;
-max-width: 27%;
-min-height: 60vh;
+background: linear-gradient(135deg, rgba(225,225,225,0.1) rgba(225,225,225,0)); border:1px solid rgba(225, 225, 225, 0.18); ;border-radius: 4px;
+box-shadow: 0 8px 32px 0 rgba(53, 0, 103, 0.37);
+backdrop-filter: blur;
 display: block;
 }
-
 #addTaskText{
 margin: 10px;
 height: 5vh;
 width: 70%;
-border: solid 2px black; border-radius: 4px;
+background-color:rgb(225,225,225,0); border: 2px solid white; color: white;
+border-radius: 6px;
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
-
 #addTaskBtn{
-background-color: white;
-color: black;
 height: 6vh; 
-border: solid 2px black; border-radius: 4px;
+background-color: rgb(225,225,225,0); border: 2px solid; border-radius: 5px; color: white;
 width: 60px;
+box-shadow: 0 8px 32px 0 rgba(53, 0, 103, 0.37);
 }
-
 .deleteBtn{
 background-color: red;
 color: white;
 height: 25px;
 float: right;
 margin-top: 1px;
-
 }
-
 .editBtn{
-    background-color: lightseagreen ;
-    color: white;
-    height: 25px;
-    float: right;
-    margin-top: 1px;
-    
-    }
+background-color: lightseagreen ;
+color: white;
+height: 25px;
+float: right;
+margin-top: 1px;
+}
+::placeholder {color: white;}
